@@ -253,6 +253,58 @@ function formatStr(str) {
 		.join("");
 }
 
-console.log(isAnagram("elbow", "below"));
+// console.log(isAnagram("elbow", "below"));
 
 // LEARNING OF ANAGRAM CHALLENGE: as long as you can strip away the space and just make sure that both strings have the exact same letters, you'll pass the test. The way it's given to you makes you think that you have to compare the strings to all the words out there.
+
+// CODE CHALLENGE: FIND VOWELS IN A STRING
+
+function vowel(str) {
+	/*
+	// turn the string into an array
+	const textArr = str.split("");
+
+	// filter them and return only if iteration matches a vowel
+	const filteredVowels = textArr.filter(char => {
+		if (
+			char === "a" ||
+			char === "e" ||
+			char === "i" ||
+			char === "o" ||
+			char === "u"
+		) {
+			return true;
+		}
+	});
+
+	return filteredVowels.length;
+	*/
+
+	// Solution 2
+	/*
+	let count = 0;
+	const vowels = ["a", "e", "i", "o", "u"];
+
+	for (let char of str.toLowerCase()) {
+		if (vowels.includes(char)) {
+			count++;
+		}
+	}
+
+	return count;
+	*/
+
+	// Solution 3
+	const matched = str.match(/[aeiou]/gi);
+	return matched ? matched.length : 0;
+}
+
+// console.log(vowel("apple"));
+
+// CODING CHALLENGE : FIBONNACI
+
+function fibonnaci(numb) {
+	return numb;
+}
+
+console.log(fibonnaci(5));
